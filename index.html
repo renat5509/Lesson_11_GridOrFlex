@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Log in form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <form method="post">
+
+    <div class="form-wrapper">
+    <div class="form-head-wrapper">
+      <h1 class="form-title">Log in form</h1>
+      
+    </div>
+
+    <div class="content-wrapper">
+      <div class="login-wrapper">
+        <label class="login" for="login">Email<span id="required">*</span></label>
+ 
+    <input class="form-login" id="login"
+      type="email"
+      placeholder="email"
+      name="login"
+      required
+    />
+  </div>
+
+  <div class="photo-wrapper">
+        <label class="photo" for="photo">Your photo</label>
+
+    <input class="form-photo" type="file" name="avatar" id="photo" placeholder="your photo" accept="image/*"/>
+  </div>
+
+  <div class="password-wrapper">
+        <label class="password" for="password">Password<span id="required">*</label>
+
+    <input class="form-password" id="password" type="password" placeholder="min 8 char" minlength="8" required/>
+  </div>
+
+  <div class="button-wrapper">
+        <button class="button-submit" type="submit">Send</button>
+  </div>
+
+      </div>
+
+    </div>
+
+</form>
+  </body>
+</html>

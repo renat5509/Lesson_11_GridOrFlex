@@ -1,0 +1,100 @@
+#required{
+    color: red;
+}
+
+input:invalid:not(:placeholder-shown){
+    border-color: red;
+}
+input:valid:not(:placeholder-shown){
+    border-color: rgb(0, 255, 0);
+}
+
+:root{
+    --form-padding: 20px;
+    --background-color: rgb(123, 104, 238);
+    --content-background-color: rgb(147, 112, 219);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-wrapper{
+    color: white;
+    border: 0px;
+    border-radius: 3px;
+    max-width: 300px;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.form-head-wrapper{
+    border-bottom: 0px;
+    background-color: var(--background-color);
+    padding: var(--form-padding);
+    display: flex;
+    justify-content: center;
+}
+
+.form-title{
+    margin: 0px;
+    grid-area: title;
+}
+.content-wrapper{
+    padding: var(--form-padding);
+    background-color: var(--content-background-color);
+    display: grid;
+    grid-template: 
+    "login" 
+    "photo" 100px
+    "password"
+    "button-submit" /220px;
+}
+
+.login-wrapper{
+    grid-area: login;
+}
+
+.photo-wrapper{
+    padding-top: 20px;
+    grid-area: photo;
+}
+
+.password-wrapper{
+    grid-area: password;
+}
+
+.button-wrapper{
+    grid-area: button-submit;
+}
+
+.button-submit{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    width: 70px;
+    height: 30px;
+} 
+
+.button-submit:hover{
+    color: white;
+    background: #8A2BE2;
+}
+
+.button-submit:active{
+    color: white;
+    background: #9400D3;
+}
+
+.form-login,
+.form-password{
+    font-size: 15px;
+}
+
