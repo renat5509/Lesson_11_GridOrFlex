@@ -27,7 +27,6 @@ body{
     color: white;
     border: 0px;
     border-radius: 3px;
-    max-width: 300px;
     display: grid;
     grid-template-rows: 1fr 4fr;
     position: absolute;
@@ -44,10 +43,10 @@ body{
     justify-content: center;
 }
 
-.form-title{
+/* .form-title{
     margin: 0px;
     grid-area: title;
-}
+} */
 .content-wrapper{
     padding: var(--form-padding);
     background-color: var(--content-background-color);
@@ -81,6 +80,7 @@ body{
     font-weight: bolder;
     width: 70px;
     height: 30px;
+    transition: background-color 1s ease;
 } 
 
 .button-submit:hover{
@@ -97,4 +97,79 @@ body{
 .form-password{
     font-size: 15px;
 }
-
+@media only screen and (min-width: 320px) and (max-width: 1025px){
+    div{
+        display: grid;
+    }
+    .form-wrapper{
+        width: 100vw;
+        height: 100vh;
+    }
+    .form-head-wrapper{
+        align-items: center;
+    }
+    .form-title{
+        font-weight: bolder;
+    }
+    .content-wrapper{
+        grid-template: 
+        "login" 50px
+        "photo" 100px
+        "password" 50px
+        "button-submit" 150px /250px;
+    }
+    .form-login,
+    .form-password{
+        font-size: 20px;
+        align-items: center;
+    }
+    label{
+        font-size: large;
+        font-weight: bold;
+    }
+    span{
+        font-weight: bold;
+    }
+    .button-wrapper{
+        justify-content: center;
+        align-items: center;
+    }
+    .button-submit{
+        width: 100px;
+        height: 80px;
+        border-radius: 5px;
+    }
+}
+    @media only screen and (min-width: 540px) and (max-width: 1025px){
+        .form-wrapper{
+            width: 100%;
+            height: 100%;
+            font-size: 25px;
+        }
+        .content-wrapper{
+            justify-content: center;
+        }
+        .content-wrapper{
+            grid-template: 
+            "login" 100px 
+            "photo" 100px
+            "password" 100px
+            "button-submit" 150px / 400px;
+        }
+        .form-login,
+        .form-password{
+        font-size: 30px;
+        }
+        label{
+            font-size: 22px;
+        }
+        .form-photo{
+            size: 100%;    
+        }
+        .button-submit{
+            width: 150px;
+            height: 60px;
+            font-weight: bold;
+            font-size: larger;
+        }
+    }
